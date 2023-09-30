@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Me</title>
+  </head>
+  <body
+    class="bg-[url('./images/bg_image.jpg')] bg-center bg-cover bg-no-repeat min-h-screen w-full flex flex-col gap-5 items-center justify-start p-10"
+  >
+    <div class="w-fit flex items-center">
+      <h1 class="text-white font-bold text-2xl">Weather Me</h1>
+      <img src="./images/116.png" alt="" class="w-14 h-14" srcset="" />
+    </div>
+
+    <form
+      action=""
+      method="get"
+      class="flex w-4/5 md:w-3/5 lg:w-[35%] items-center justify-center gap-2"
+    >
+      <input
+        type="text"
+        name="city"
+        placeholder="Enter a city..."
+        required
+        class="py-2 px-3 w-full rounded-full bg-white text-white text-lg outline outline-2 backdrop-blur-lg ease-in-out duration-300 outline-white/70 focus:bg-white/20"
+      />
+      <button type="submit" class="">
+        <ion-icon
+          class="text-white font-black text-2xl p-3 bg-white/50 rounded-full"
+          name="search"
+        ></ion-icon>
+      </button>
+    </form>
+
+    <!-- Home city card -->
+    <div
+      class="p-5 w-4/5 justify-between flex rounded-3xl shadow-2xl cursor-pointer transform ease-in-out bg-white/20 duration-500 backdrop-blur-sm md:w-3/5 lg:w-[35%] hover:scale-[105%]"
+    >
+      <div id="left" class="flex flex-col">
+        <div id="top" class="mb-6">
+          <p class="font-bold text-5xl text-white">24°C</p>
+          <p class="font-semibold text-md text-white">Now</p>
+        </div>
+        <p class="font-semibold text-xl text-white">London, UK</p>
+      </div>
+      <div id="right" class="flex justify-end items-center">
+        <img class="w-28 h-4w-28" src="./images/113.png" alt="" />
+      </div>
+    </div>
+
+    <!-- Weather Details -->
+    <!-- Left -->
+    <div
+      class="flex w-full justify-between bg-[#0198afb6] p-3 backdrop-blur-2xl ease-in-out duration-500 rounded-xl md:w-3/5 lg:w-[35%]"
+    >
+      <div id="left" class="flex flex-col justify-start">
+        <!-- Icon -->
+        <img class="" src="./images/116.png" alt="weather icon" />
+        <!-- Weather -->
+        <p class="font-bold text-4xl text-white">Sunny</p>
+        <!-- Description -->
+        <p class="font-semibold text-white">clear sky</p>
+      </div>
+      <div id="right" class="w-1/2 flex-col space-y-2">
+        <!-- Temperature -->
+        <div
+          class="flex w-full justify-around items-center bg-white/30 rounded-lg p-1 gap-6"
+        >
+          <ion-icon class="w-8 h-8 text-white" name="thermometer"></ion-icon>
+          <div class="">
+            <p class="font-bold text-2xl text-right text-[#ff5a00]">26.08 °C</p>
+            <p class="text-sm text-white text-right">Temperature</p>
+          </div>
+        </div>
+        <!-- Wind Speed -->
+        <div
+          class="flex w-full justify-around items-center bg-white/30 rounded-lg p-1 gap-6"
+        >
+          <ion-icon class="w-8 h-8 text-white" name="speedometer"></ion-icon>
+          <div class="">
+            <p class="font-bold text-2xl text-[#ff5a00] text-right">1.18 m/s</p>
+            <p class="text-sm text-white text-right">Wind</p>
+          </div>
+        </div>
+        <!-- Humidity -->
+        <div
+          class="flex w-full justify-around items-center bg-white/30 rounded-lg p-1 gap-6"
+        >
+          <ion-icon class="w-8 h-8 text-white" name="rainy"></ion-icon>
+          <div class="">
+            <p class="font-bold text-2xl text-[#ff5a00] text-right">89 %</p>
+            <p class="text-sm text-white text-right">Humidity</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
+
+<!-- 
+Current Weather Data: https://openweathermap.org/current
+Weather Icons: https://openweathermap.org/weather-conditions
+Download Icons: https://cdn.weatherapi.com/weather.zip
+ -->
