@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Image Generator</title>
+  </head>
+  <body
+    class="bg-gradient-to-br from-[#aa076b] to-[#61045f] min-h-screen flex flex-col items-center justify-center gap-4 p-8"
+  >
+    <h1
+      class="font-bold text-3xl text-white bg-white/5 p-4 rounded-xl backdrop-blur-lg shadow-lg"
+    >
+      Enter your prompt below to generate your image
+    </h1>
+    <main
+      class="bg-white/70 flex gap-5 w-full justify-between p-4 flex-col rounded-xl lg:flex-row lg:w-4/5"
+    >
+      <!-- Prompt -->
+      <form action="" method="post" class="flex flex-col gap-5 w-full lg:w-1/2">
+        <h1 class="text-[#61045f] font-semibold text-xl">
+          Enter your prompt below
+        </h1>
+        <textarea
+          required
+          name="prompt"
+          id="prompt"
+          cols="30"
+          rows="10"
+          placeholder="Enter image description here..."
+          class="w-full h-full text-xl p-3 rounded-lg resize-none duration-100 ease-in-out focus:outline-none focus:border-2 focus:border-[#61045f85]"
+        ></textarea>
+        <button
+          class="p-3 bg-[#61045f] text-white font-bold text-xl rounded-lg ease-in-out duration-1000 hover:bg-[#61045fec] hover:scale-[98%]"
+          type="submit"
+        >
+          Generate Image
+        </button>
+      </form>
+      <!-- Image -->
+      <div class="flex flex-col gap-5 w-full lg:w-1/2 mt-10 md:mt-0">
+        <h1 class="text-[#61045f] font-semibold text-xl">
+          Your generated image
+        </h1>
+        <img
+          class="rounded-lg w-full"
+          src="images/bg_image.jpg"
+          alt="Generated Image"
+        />
+
+        <!-- Description and Download Button -->
+        <div class="flex flex-col gap-2">
+          <p class="text-[#61045f] font-bold">
+            Description:
+            <span class="font-medium">Your image description</span>
+          </p>
+          <a
+            class="flex gap-2 items-center justify-center p-3 bg-[#61045f] text-white font-bold text-xl rounded-lg ease-in-out duration-1000 hover:bg-[#61045fec] hover:scale-[98%]"
+            href=""
+            download
+            >Download Image
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
